@@ -1,0 +1,28 @@
+
+#pragma once
+
+#include <SDL3/SDL.h>
+
+struct Node
+{
+    SDL_FPoint position;
+    double angle;
+};
+
+
+
+
+
+
+
+
+
+#pragma once
+
+#include <SDL3/SDL.h>
+
+struct Texture{
+    SDL_Texture *texture;
+    SDL_FPoint center, size;
+};
+
