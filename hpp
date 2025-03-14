@@ -2,6 +2,9 @@
 #pragma once
 
 #include <SDL3/SDL.h>
+#include<flecs.h>
+#include "Node.hpp"
+#include "Texture.hpp"
 
 class Model
 {
@@ -21,11 +24,12 @@ protected:
 
     void initMechanism();
 
-    void renderMechanism();
+    flecs::system createRenderMechanismSystem();
 
-    SDL_Texture* createBaseTexture();
+    Texture createBaseTexture();
 
-    SDL_Texture *t0;
-    SDL_FPoint p1, p2;
+    flecs::world ecs;
+    flecs::system rendererMechanism;
+    flecs::entity e0;
+    flecs::entity e1;
 };
-
